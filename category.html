@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music Nest Category</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h1 class="logo">
+    <span class="logo-icon">♪</span>
+    <span class="logo-text">Music Nest</span>
+  </h1>
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="playlist.html">Playlist</a></li>
+    <li><a href="liked.html">Liked Songs</a></li>
+  </ul>
+</div>
+
+<div class="main">
+  <div class="banner">
+    <h1 id="title">Category</h1>
+    <p>Enjoy your songs</p>
+  </div>
+
+  <div class="playlist-box">
+    <select id="playlistSelect"></select>
+  </div>
+
+  <h2>Your Songs</h2>
+  <div id="songs"></div>
+</div>
+
+<div class="player">
+  <div class="player-left">
+    <img id="playerImg" src="images/playlist.jpg" class="player-img" alt="Now Playing">
+    <div class="player-text">
+      <span id="nowPlaying">No song playing</span>
+      <small id="nowCategory">Select a song</small>
+    </div>
+  </div>
+
+  <div class="player-center">
+    <div class="visualizer" id="visualizer">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <button onclick="prevSong()">⏮</button>
+    <button onclick="playCurrent()">▶</button>
+    <button onclick="pauseSong()">⏸</button>
+    <button onclick="nextSong()">⏭</button>
+  </div>
+
+  <div class="player-right">
+    <input type="range" id="progress" value="0">
+    <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

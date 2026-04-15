@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Playlist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h1 class="logo">🎧 <span>Music</span> Nest</h1>
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="playlist.html">Playlist</a></li>
+    <li><a href="liked.html">Liked Songs</a></li>
+  </ul>
+</div>
+
+<div class="main">
+  <div class="banner">
+    <h1>Your Playlist 📁</h1>
+  </div>
+
+  <input type="text" id="playlistName" placeholder="Enter playlist name">
+  <button onclick="createPlaylist()">Create</button>
+
+  <ul id="playlistList"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

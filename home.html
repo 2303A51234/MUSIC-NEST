@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music Nest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h1 class="logo">
+    <span class="logo-icon">♪</span>
+    <span class="logo-text">Music Nest</span>
+  </h1>
+  <ul>
+    <li><a href="home.html" class="active">Home</a></li>
+    <li><a href="playlist.html">Playlist</a></li>
+    <li><a href="liked.html">Liked Songs</a></li>
+  </ul>
+</div>
+
+<div class="main">
+  <div class="topbar">
+    <div class="topbar-left">
+      <h2>Good Evening ✨</h2>
+      <p>Your vibe, your playlists, your music.</p>
+    </div>
+  </div>
+
+  <div class="banner home-banner">
+    <div class="banner-text">
+      <h1>Welcome to Music Nest 🎵</h1>
+      <p>Choose your favorite category and enjoy your music journey.</p>
+    </div>
+  </div>
+
+  <div class="quick-grid">
+    <div class="quick-card" onclick="openCategory('K-Pop')">🎵 K-Pop Mix</div>
+    <div class="quick-card" onclick="window.location.href='liked.html'">❤️ Liked Songs</div>
+    <div class="quick-card" onclick="openCategory('English')">🔥 Trending</div>
+    <div class="quick-card" onclick="openCategory('J-Pop')">🌙 Chill Vibes</div>
+    <div class="quick-card" onclick="openCategory('Indian')">💔 Sad Songs</div>
+    <div class="quick-card" onclick="openCategory('T-Pop')">🎉 Party Hits</div>
+  </div>
+
+  <div class="section-head">
+    <h2>Music Categories</h2>
+    <input type="text" id="searchCategories" placeholder="Search categories..." onkeyup="searchCategories()">
+  </div>
+
+  <div class="cards" id="categoryCards">
+
+    <div class="card image-card" onclick="openCategory('J-Pop')">
+      <img src="images/jpop.jpg" alt="J-Pop">
+      <div class="overlay">
+        <p>J-Pop</p>
+      </div>
+    </div>
+
+    <div class="card image-card" onclick="openCategory('K-Pop')">
+      <img src="images/kpop.jpg" alt="K-Pop">
+      <div class="overlay">
+        <p>K-Pop</p>
+      </div>
+    </div>
+
+    <div class="card image-card" onclick="openCategory('Indian')">
+      <img src="images/indian.jpg" alt="Indian">
+      <div class="overlay">
+        <p>Indian</p>
+      </div>
+    </div>
+
+    <div class="card image-card" onclick="openCategory('English')">
+      <img src="images/english.jpg" alt="English">
+      <div class="overlay">
+        <p>English</p>
+      </div>
+    </div>
+
+    <div class="card image-card" onclick="openCategory('T-Pop')">
+      <img src="images/tpop.jpg" alt="T-Pop">
+      <div class="overlay">
+        <p>T-Pop</p>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>Recently Played</h2>
+  <div class="recent-grid" id="recentSongs"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
